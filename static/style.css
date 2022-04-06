@@ -1,3 +1,13 @@
 #content {
      margin-left: 20px;
 }
+p {
+  border: 5px solid lightgrey;
+  border-radius: 5px;
+    background-image: url("bus.jpg");
+    margin-top: 25px;
+ margin-bottom: 50px;
+ margin-right: 100px;
+ margin-left: 25px;
+ font-size: 20px;
+}
