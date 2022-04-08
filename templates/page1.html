@@ -2,9 +2,27 @@
 
 {% set active_page = "page1" %}
 
+
+
+
 {% block title %}Page 1{% endblock %}
 
 {% block content %}
     <!--page content-->
     <h1>Page 1</h1>
+
+
+
+    <label for="state">Choose a state:</label>
+  <select id="state" name="statelist" form="stateform">
+    <option value="s"++>s</option>
+
+  </select>
+
+  <label for="year">Choose a year:</label>
+<select id="year" name="yearlist" form="yearform">
+  <option value="1978">1978</option>
+  <option value="2018">2018</option>
+</select>
+
 {% endblock %}
