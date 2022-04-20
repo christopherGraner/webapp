@@ -11,17 +11,19 @@
     <!--page content-->
     <h1>Page 1</h1>
 
+<form>
 
-
-    <label for="state">Choose a state:</label>
-  <select id="state" name="statelist" form="stateform">
+    <label for="State">Choose a state:</label>
+  <select id="State" name="statelist">
     {{options}}
 
   </select>
 
-  <label for="year">Choose a year:</label>
-<select id="year" name="yearlist" form="yearform">
+  <label for="Year">Choose a year:</label>
+<select id="Year" name="yearlist">
   {{options2}}
+  
 </select>
 
+</form>
 {% endblock %}
