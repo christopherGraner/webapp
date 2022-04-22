@@ -14,14 +14,17 @@ def render_main():
 def render_page1():
 
     options = ""
+    options2 = ""
 
 
     for s in State:
+        if s["State"] not in options:
             options += Markup("<option value=\"" + s["State"] + "\">" + s["State"] + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
 
 
     for y in State:
-            options2 += Markup("<option2 value=\"" + y["Year"] + "\">" + y["Year"] + "</option2>") #Use Markup so <, >, " are not escaped lt, gt, etc.
+        if str(y["Year"]) not in options2:
+            options2 += Markup("<option value=\"" + str(y["Year"]) + "\">" + str(y["Year"]) + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
 
 
     return render_template('page1.html', options = options, options2 = options2 )
