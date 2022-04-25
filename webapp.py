@@ -26,14 +26,20 @@ def render_page1():
         if str(y["Year"]) not in options2:
             options2 += Markup("<option value=\"" + str(y["Year"]) + "\">" + str(y["Year"]) + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
 
-
     return render_template('page1.html', options = options, options2 = options2 )
 
 
 
-@app.route("/p2")
-def render_page2():
-    return render_template('page2.html')
+#@app.route("/p2")
+#def render_page2():
+
+    for s in State:
+       if request.args["statelist"] == s["State"] and request.args["yearlist"] == str(y["Year"]):
+
+
+           return render_template('page1.html', options3 = s["Data"["Calculated"["Net Job Creation Rate"]]], options = options, options2 = options2 )
+
+
 
 if __name__=="__main__":
     app.run(debug=True)
